@@ -14,12 +14,12 @@ const MessageContainer = () => {
 	}, [setSelectedConversation]);
 
 	return (
-		<div className='md:min-w-[450px] flex flex-col'>
+		<div className='min-w-[300px] sm:min-w-[350px] md:min-w-[550px] lg:min-w-[700px] flex flex-col'>
 			{!selectedConversation ? (
 				<NoChatSelected />
 			) : (
 				<>
-					{/* Header */}
+					
 					<div className='bg-slate-500 px-4 py-2 mb-2'>
 						<span className='label-text'>To:</span>{" "}
 						<span className='text-gray-900 font-bold'>{selectedConversation.fullName}</span>
@@ -30,6 +30,8 @@ const MessageContainer = () => {
 			)}
 		</div>
 	);
+
+	
 };
 export default MessageContainer;
 
@@ -45,6 +47,9 @@ const NoChatSelected = () => {
 		</div>
 	);
 };
+
+
+
 
 // STARTER CODE SNIPPET
 // import MessageInput from "./MessageInput";
